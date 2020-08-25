@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap');
+
+body{
+    background-image: url('images/bg-desktop.svg');
+    font-family: 'Open Sans', sans-serif;  
+    background-color: hsl(257, 40%, 49%);
+    margin: 0;
+}
+
+h1{
+    font-family: 'Poppins', sans-serif; 
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 150px 1fr;
+    grid-template-columns: 60% 40%;
+}
+
+.logo{
+    margin: auto 40px;
+    width: 200px;
+}
+
+.mockup{
+    grid-area: 2;
+    margin: 0 auto;
+    width: 600px;
+}
+
+.text-container{
+    grid-area: 2;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.text-container h1{
+    padding-right: 70px;
+}
+
+.text-container p{
+    padding-right: 35px;
+}
+
+.text-container a{
+    margin-top: 35px;
+    border: 1px solid #fff;
+    padding: 10px 45px;
+    border-radius: 30px;
+    background-color: #fff;
+    color: darkgray;
+    width: 70px;
+    text-align: center;
+    display: block;
+}
+
+footer{
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.icon-container{
+    grid-column: 5;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icon-instagram, .icon-twitter, .icon-facebook{
+    border: 2px solid #fff;
+    padding: 5%;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 50%;
+}
+
+@media (max-width:1024px){
+    .logo{
+        width: 30%;
+      }
+
+      .mockup{
+          width: 80%;
+          margin: auto;
+      }
+
+      footer{
+        margin-top: 40px;
+        grid-template-columns: repeat(5,1fr);
+      }
+
+      .icon-container{
+        grid-column: 4;
+        justify-content: space-between;
+      }
+    }
+
+@media (max-width:768px){
+    .container{
+        display: inherit;
+        text-align: center;
+    }
+
+    .logo{
+        padding: 3%;
+    }
+
+    .mockup{
+        width: 60%;
+    }
+
+    .text-container{
+        padding: 0 15%;
+    }
+
+    .text-container h1{
+        padding: 0 50px;
+    }
+
+    .text-container p{
+        padding-right: 0;
+    }
+
+    .text-container a{
+        margin: 25px auto 0;
+    }
+
+    footer{
+        display: block;
+        height: 60px;
+    }
+
+    .icon-container{
+        display: block;
+        text-align: center;
+    }
+
+    .icon-instagram, .icon-twitter, .icon-facebook{
+        padding: 2%;
+    }
+}
+
+@media (max-width: 375px){
+    body{
+        background-image: url("images/bg-mobile.svg");
+    }
+
+    .logo{
+        width: 45%;
+        padding: 5% 0;
+    }
+
+    .text-container h1{
+        padding: 0;
+    }
+
+    
+}
